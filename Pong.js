@@ -37,7 +37,7 @@ function draw()
 	drawBall();
 }
 
-function keyHandling()
+function keyHandling()// Fonction qui vérifie si une touche est appuyée 
 {
 	if (keyIsDown(UP_ARROW))
 		if (Player2.y - 30 > 0)
@@ -102,12 +102,11 @@ function drawBall() // Fonction qui permet de dessiner la balle
 	ellipse(Ball.x, Ball.y, 10, 10); // On dessine une ellipse de même taille ce qui donne un rond
 }
 
-function endGame(winner) { // Fonction de fin de partie 
+function endGame(winner) { // Fonction de fin de partie on passe en parametre le nom du joueur gagnant
 	noStroke();
 	textAlign(CENTER);
 	textSize(60);
-	fill(255);
-	text(winner, width / 2, height / 2);
-	noLoop();
+	fill(255, 255, 255);
+	text(winner, width / 2, height / 2); //On écrit le message de victoire avec le joeueur gagnant
+	noLoop();// Fonction qui permet de stopper le programme
   }
-  
